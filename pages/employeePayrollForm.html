@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="en">  
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap ">
         <link rel="stylesheet" href="../css/employeepayrollform.css">
         <title>Employee payroll form</title>
-        <script src="\js\payroll_form.js"></script>
-        <script src="\js\employeePayrollData.js"></script>
+        <script src="../js/payroll_form.js"></script>
+        <script src="../js/employeePayrollData.js"></script>
       </head>
-
     <body>
     <header class="header-content header">
         <div class="logo-content">
@@ -33,25 +31,25 @@
             <label class="label text" for="profile">Profile Image</label>
             <div class="profile-radio-content">
                 <label>
-                    <input type="radio" id = "profile1" name="profile" value="../assets/profile-images/Ellipse -1.png" required>
+                    <input type="radio" id = "profile" name="profile" value="../assets/profile-images/Ellipse -1.png" required>
                     <img class="profile" id = "image1" src="../assets/profile-images/Ellipse -1.png">
                 </label>
                 <label>
-                    <input type="radio" id = "profile2" name="profile" value="../assets/profile-images/Ellipse -2.png" required>
+                    <input type="radio" id = "profile" name="profile" value="../assets/profile-images/Ellipse -2.png" required>
                     <img class="profile" id = "image2" src="../assets/profile-images/Ellipse -2.png">
                 </label>
                 <label>
-                    <input type="radio" id = "profile3" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
+                    <input type="radio" id = "profile" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
                     <img class="profile" id = "image3" src="../assets/profile-images/Ellipse -3.png">
                 </label>
                 <label>
-                    <input type="radio" id = "profile4" name="profile" value="../assets/profile-images/Ellipse -4.png" required>
+                    <input type="radio" id = "profile" name="profile" value="../assets/profile-images/Ellipse -4.png" required>
                     <img class="profile" id = "image4" src="../assets/profile-images/Ellipse -4.png">
                 </label>
                 </div>
                 </div>  
                 <div class="row-content">
-                  <label class="label text" for="gender">Gender</label>
+                  <label class="label text" for="gender" ,id="sgender">Gender</label>
                  <div>
                       <input type="radio" id="male" name="gender" value="male">
                       <label class="text" for="male">Male</label>
@@ -60,7 +58,7 @@
                   </div>
               </div>
               <div class="row-content">
-                  <label class="label text" for="department">Department</label>
+                  <label class="label text" for="department" id="Sdep">Department</label>
                   <div>
                       <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
                       <label class="text" for="hr">HR</label>
@@ -78,7 +76,7 @@
               </div>
               <div class="row-content">
                   <label class="label text" for="salary">Choose Your Salary: </label>
-                  <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+                  <input class="input" type="range" name="salary" id="salary" min="30000" max="500000" step="100" value="400000">
                   <output class="salary-output text" for="salary">400000</output>
               </div>
               <div class="row-content">
@@ -147,8 +145,9 @@
         <div class="buttonParent">
           <a href="./home.html" class="button cancelButton">Cancel</a>
           <div class="submit-reset">
-            <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+            <button onclick = "loclStorage()"type="submit" class="button submitButton" id="submitButton">Submit</button>
             <button type="reset" class="resetButton button">Reset</button>
+            
         </div>
         </div>
           </form>
